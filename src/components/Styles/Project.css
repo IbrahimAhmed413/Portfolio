@@ -1,0 +1,17 @@
+
+.project-main-div {
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  gap: 1%;
+}
+.gradient-color {
+  background: linear-gradient(90deg, #4a77b3, #8b4ed2); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.writing-div{
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 80%;
+}

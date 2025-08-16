@@ -1,0 +1,40 @@
+.Header-main-div {
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+}
+.links-div {
+  display: flex;
+  gap: 100px;
+  border-radius: 36px;
+  margin: 2%;
+  align-items: center;
+  background-color: #20113b;
+  padding: 15px 100px !important;
+  opacity: 80%;
+  border: 1px solid grey;
+}
+.links-div-button {
+  margin-left: auto;
+  display: flex;
+}
+.links-div-button-resume {
+  border-radius: 46px;
+  padding: 8px 15px;
+  /* background-color: #6469fe; */
+  background: linear-gradient(90deg, #4a77b3, #8b4ed2);
+  color: #ffffff;
+  cursor: pointer;
+   border-color: grey;
+}
+.links-div-button-name {
+  border-radius: 100px;
+  width: 35px;
+  background: linear-gradient(90deg, #4a77b3, #8b4ed2);
+  color: #ffffff;
+  border: none;
+}
+.links-div a {
+  text-decoration: none;
+  color: #ffffff;
+}

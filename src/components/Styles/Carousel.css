@@ -1,0 +1,32 @@
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+}
+.wrapper {
+  border-radius: 8px;
+  padding: 5px 20px;
+  border: 1px solid grey;
+  background: linear-gradient(to top, #0d1321, #0d1321, #6c273c);
+}
+.image {
+  border-radius: 8px;
+  border: 1px solid #1f232e;
+}
+.name {
+  color: white;
+  margin-top: 3%;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-between;
+}
+.para {
+  color: white;
+  margin-top: 2%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
