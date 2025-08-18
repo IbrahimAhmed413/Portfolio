@@ -46,7 +46,7 @@
 @media (max-width: 768px) {
   .links-div {
     /* Keep flex-direction: row (horizontal) */
-    margin-top: 10%;
+    margin-top: 15%;
     gap: 20px; /* Reduced from 100px */
     padding: 10px 20px !important; /* Reduced from 15px 100px */
     border-radius: 25px; /* Slightly smaller radius */
@@ -72,7 +72,7 @@
 /* ----------- Very Small Mobile ----------- */
 @media (max-width: 480px) {
   .links-div {
-    margin-top: 10%;
+    margin-top: 10% !important;
     gap: 18px; /* Even smaller gap */
     padding: 8px 15px !important;
     border-radius: 20px;
