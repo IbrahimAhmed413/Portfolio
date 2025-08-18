@@ -28,7 +28,7 @@ const Carousel = (props) => {
               />
             </div>
             <div className="name">
-              {props.name}
+              {item.name}
               <div>
                 {tecimages.map((e) => (
                   <img
