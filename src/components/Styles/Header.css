@@ -1,8 +1,8 @@
 .Header-main-div {
-  /* text-align: center; */
   display: flex;
   justify-content: center;
 }
+
 .links-div {
   display: flex;
   gap: 100px;
@@ -14,19 +14,21 @@
   opacity: 80%;
   border: 1px solid grey;
 }
+
 .links-div-button {
   margin-left: auto;
   display: flex;
 }
+
 .links-div-button-resume {
   border-radius: 46px;
   padding: 8px 15px;
-  /* background-color: #6469fe; */
   background: linear-gradient(90deg, #4a77b3, #8b4ed2);
   color: #ffffff;
   cursor: pointer;
-   border-color: grey;
+  border-color: grey;
 }
+
 .links-div-button-name {
   border-radius: 100px;
   width: 35px;
@@ -34,34 +36,51 @@
   color: #ffffff;
   border: none;
 }
+
 .links-div a {
   text-decoration: none;
   color: #ffffff;
 }
+
+/* ----------- Mobile (Keep horizontal layout, adjust sizes) ----------- */
 @media (max-width: 768px) {
   .links-div {
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
+    /* Keep flex-direction: row (horizontal) */
+    margin-top: 10%;
+    gap: 20px; /* Reduced from 100px */
+    padding: 10px 20px !important; /* Reduced from 15px 100px */
+    border-radius: 25px; /* Slightly smaller radius */
+    margin: 2% 1%; /* Reduce horizontal margin */
   }
 
-  .links-div-button {
-    margin-left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .links-div-button-name {
+    width: 30px; /* Slightly smaller profile image */
   }
 
   .links-div a {
+    font-size: 14px; /* Smaller text */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  .links-div-button-resume {
     font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 20px; /* Smaller radius */
   }
 }
 
+/* ----------- Very Small Mobile ----------- */
 @media (max-width: 480px) {
   .links-div {
-    gap: 10px;
-    padding: 15px;
+    margin-top: 10%;
+    gap: 18px; /* Even smaller gap */
+    padding: 8px 15px !important;
+    border-radius: 20px;
+    margin: 2% 0.5%;
+  }
+
+  .links-div-button-name {
+    width: 25px; /* Smaller profile image */
   }
 
   .links-div a {
@@ -70,6 +89,31 @@
 
   .links-div-button-resume {
     font-size: 12px;
-    padding: 6px 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+}
+
+/* ----------- Extra Small Mobile (for very narrow screens) ----------- */
+@media (max-width: 360px) {
+  .links-div {
+    margin-top: 15%;
+    gap: 15px;
+    padding: 6px 12px !important;
+    border-radius: 18px;
+  }
+
+  .links-div-button-name {
+    width: 22px;
+  }
+
+  .links-div a {
+    font-size: 11px;
+  }
+
+  .links-div-button-resume {
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 12px;
   }
 }
