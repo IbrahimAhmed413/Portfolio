@@ -16,65 +16,67 @@ const Carousel = (props) => {
   return (
     <>
       <div className="mainDiv">
-        <div className="wrapper">
-          <div style={{ textAlign: "center" }}>
-            <img
-              src={props.img}
-              alt=""
-              width="100%"
-              height={{}}
-              className="image"
-            />
-          </div>
-          <div className="name">
-            {props.name}
-            <div>
-              {tecimages.map((e) => (
+        {props.data.map((item) => (
+          <div className="wrapper">
+            <div style={{ textAlign: "center" }}>
+              <img
+                src={item.img}
+                alt=""
+                width="100%"
+                height={{}}
+                className="image"
+              />
+            </div>
+            <div className="name">
+              {props.name}
+              <div>
+                {tecimages.map((e) => (
+                  <img
+                    width={25}
+                    height={25}
+                    style={{ borderRadius: "16px" }}
+                    src={e.img}
+                    alt=""
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="para">
+              <p>{item.para}</p>
+              <div>
+                <TfiNewWindow />
+                <a
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    fontSize: "12px",
+                    marginLeft: "1%",
+                  }}
+                  href={item.live}
+                >
+                  Live
+                </a>
                 <img
-                  width={25}
-                  height={25}
-                  style={{ borderRadius: "16px" }}
-                  src={e.img}
+                  width={15}
+                  style={{ marginLeft: "3%", borderRadius: "16px" }}
+                  src={githubimage}
                   alt=""
                 />
-              ))}
+                <a
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    fontSize: "12px",
+                    marginLeft: "1%",
+                  }}
+                  href={item.code}
+                >
+                  Code
+                </a>
+              </div>
             </div>
           </div>
-          <div className="para">
-            <p>{props.para}</p>
-            <div>
-              <TfiNewWindow />
-              <a
-                style={{
-                  textDecoration: "none",
-                  color: "white",
-                  fontSize: "12px",
-                  marginLeft: "1%",
-                }}
-                href={props.live}
-              >
-                Live
-              </a>
-              <img
-                width={15}
-                style={{ marginLeft: "3%", borderRadius: "16px" }}
-                src={githubimage}
-                alt=""
-              />
-              <a
-                style={{
-                  textDecoration: "none",
-                  color: "white",
-                  fontSize: "12px",
-                  marginLeft: "1%",
-                }}
-                href={props.code}
-              >
-                Code
-              </a>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );
