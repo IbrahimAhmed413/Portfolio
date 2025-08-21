@@ -1,15 +1,15 @@
 import React from "react";
 import "./Styles/Project.css";
-const ProjectScreen = () => {
+const ProjectScreen = (props) => {
   return (
     <>
       <div className="firstdiv">
         <div className="project-main-div">
-          <h1>My</h1>
-          <h1 className="gradient-color">Top Projects</h1>
+          <h1>{props.h1}</h1>
+          <h1 className="gradient-color">{props.dh1}</h1>
         </div>
         <div className="writing-div">
-          Showcasing my most impactful work that solve real-world problems
+          {props.div}
         </div>
       </div>
     </>
