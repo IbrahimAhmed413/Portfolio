@@ -196,7 +196,7 @@ const styles = `
   }
 `;
 
-export default function ContactSection() {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
