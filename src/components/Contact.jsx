@@ -2,7 +2,6 @@ import ProjectScreen from "./ProjectScreen";
 import "./Styles/Project.css";
 import React, { useState } from "react";
 import { Mail, Linkedin, Github, Phone } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 const styles = `
   .contact-container {
@@ -247,7 +246,7 @@ export default function ContactSection() {
       icon: <Linkedin size={24} />,
       title: "LinkedIn",
       value: "linkedin.com/in/ibrahimahmed",
-      link: "https://www.linkedin.com/in/ibrahim-ahmed-8b8961254/", 
+      link: "https://www.linkedin.com/in/ibrahim-ahmed-8b8961254/",
     },
 
     {
@@ -278,7 +277,7 @@ export default function ContactSection() {
               <div
                 key={index}
                 className="contact-card"
-                onClick={() => (window.open(item.link , '_blank') )}
+                onClick={() => window.open(item.link, "_blank")}
               >
                 <div className="contact-card-content">
                   <div className="contact-icon">{item.icon}</div>
@@ -338,8 +337,7 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="form-input"
-                  placeholder=""
-                  
+                  placeholder="Feel free to ask!"
                 />
               </div>
 
