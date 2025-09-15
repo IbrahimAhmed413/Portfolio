@@ -9,6 +9,7 @@ const styles = `
     margin: 3rem;
     display: flex;
     align-items: center;
+    padding: 0rem 4rem;
     justify-content: center;
   }
 
@@ -57,6 +58,7 @@ const styles = `
     align-items: center;
     justify-content: center;
     color: #60a5fa;
+    flex-shrink: 0;
   }
 
   .contact-info h3 {
@@ -70,6 +72,7 @@ const styles = `
     color: #d1d5db;
     font-size: 1rem;
     margin: 0;
+    word-break: break-word;
   }
 
   .contact-form-container {
@@ -82,7 +85,7 @@ const styles = `
 
   .form-header {
     margin-bottom: 2rem;
-    text-align:center;
+    text-align: center;
   }
 
   .form-header h2 {
@@ -101,7 +104,6 @@ const styles = `
 
   .form-group {
     margin-bottom: 1.5rem;
-    padding-right:2rem
   }
 
   .form-group label {
@@ -114,6 +116,7 @@ const styles = `
 
   .form-input, .form-textarea {
     width: 100%;
+    box-sizing: border-box;
     padding: 0.75rem 1rem;
     background: rgba(51, 65, 85, 0.5);
     border: 1px solid rgba(75, 85, 99, 0.5);
@@ -135,8 +138,8 @@ const styles = `
   }
 
   .form-textarea {
-    resize: auto;
-    min-height: 0px;
+    resize: vertical;
+    min-height: 120px;
   }
 
   .submit-btn {
@@ -170,28 +173,149 @@ const styles = `
     transform: none;
   }
 
+  /* Tablet styles */
   @media (max-width: 1024px) {
+    .contact-container {
+      margin: 2rem 1rem;
+    }
+    
     .contact-grid {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
   }
 
+  /* Mobile styles */
   @media (max-width: 768px) {
     .contact-container {
-      padding: 1rem;
-    }
-    
-    .contact-form-container {
-      padding: 1.5rem;
-    }
-    
-    .form-header h2 {
-      font-size: 1.75rem;
+      margin: 1rem;
+      padding: 0;
+      max-height: none;
     }
 
     .contact-grid {
       gap: 1.5rem;
+      max-width: 100%;
+    }
+
+    .contact-cards {
+      gap: 1rem;
+    }
+
+    .contact-card {
+      padding: 1rem;
+      border-radius: 0.75rem;
+    }
+
+    .contact-card:hover {
+      transform: scale(1.02);
+    }
+
+    .contact-card-content {
+      gap: 0.75rem;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .contact-info h3 {
+      font-size: 1rem;
+    }
+
+    .contact-info p {
+      font-size: 0.875rem;
+    }
+
+    .contact-form-container {
+      padding: 1.5rem;
+    }
+
+    .form-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-header h2 {
+      font-size: 1.5rem;
+    }
+
+    .form-header p {
+      font-size: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-input,
+    .form-textarea {
+      padding: 0.625rem 0.875rem;
+      font-size: 0.875rem;
+    }
+
+    .form-textarea {
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      padding: 0.625rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Small mobile styles */
+  @media (max-width: 480px) {
+    .contact-container {
+      margin: 0.5rem;
+    }
+
+    .contact-grid {
+      gap: 1rem;
+    }
+
+    .contact-card {
+      padding: 0.875rem;
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .contact-info h3 {
+      font-size: 0.9rem;
+    }
+
+    .contact-info p {
+      font-size: 0.8rem;
+    }
+
+    .contact-form-container {
+      padding: 1rem;
+    }
+
+    .form-header h2 {
+      font-size: 1.25rem;
+    }
+
+    .form-header p {
+      font-size: 0.9rem;
+    }
+
+    .form-input,
+    .form-textarea {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+    }
+
+    .form-textarea {
+      min-height: 80px;
+    }
+
+    .submit-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
     }
   }
 `;
@@ -240,7 +364,7 @@ export default function Contact() {
       icon: <Mail size={24} />,
       title: "Email",
       value: "ibrahimahmed1233@gmail.com",
-      link: "https://mail.google.com/mail/?view=cm&fs=1&to=ibrahimahmed12333@gmail.com",
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=ibrahimahmed1233@gmail.com",
     },
     {
       icon: <Linkedin size={24} />,
@@ -248,7 +372,6 @@ export default function Contact() {
       value: "linkedin.com/in/ibrahimahmed",
       link: "https://www.linkedin.com/in/ibrahim-ahmed-8b8961254/",
     },
-
     {
       icon: <Github size={24} />,
       title: "GitHub",
@@ -262,13 +385,17 @@ export default function Contact() {
       link: "tel:+923431938944",
     },
   ];
+
   return (
     <>
-      <ProjectScreen
-        dh1="Contact Me"
-        div="I'd love to collaborate or discuss new opportunities - feel fresh to reach out "
-      />
       <style>{styles}</style>
+      <div className="ProjectScreen">
+        <ProjectScreen
+          dh1="Contact Me"
+          div="I'd love to collaborate or discuss new opportunities - feel free to reach out"
+        />
+      </div>
+
       <div className="contact-container">
         <div className="contact-grid">
           {/* Left Side - Contact Info */}
@@ -293,10 +420,10 @@ export default function Contact() {
           {/* Right Side - Contact Form */}
           <div className="contact-form-container">
             <div className="form-header">
-              <h2>Contact Me</h2>
+              <h2>Send a Message</h2>
               <p>
-                I'd love to collaborate der discuss new opportunities – feel
-                free to reach out.
+                I'd love to collaborate or discuss new opportunities – feel free
+                to reach out.
               </p>
             </div>
 
@@ -328,20 +455,8 @@ export default function Contact() {
                   disabled={isSubmitting}
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="email">Message</label>
-                <input
-                  type=""
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="form-input"
-                  placeholder="Feel free to ask!"
-                />
-              </div>
 
-              {/* <div className="form-group">
+              <div className="form-group">
                 <label htmlFor="message">Message</label>
                 <textarea
                   id="message"
@@ -352,7 +467,7 @@ export default function Contact() {
                   placeholder="Tell me about your project or just say hello..."
                   disabled={isSubmitting}
                 />
-              </div> */}
+              </div>
 
               <button
                 type="button"
