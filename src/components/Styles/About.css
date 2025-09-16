@@ -1,0 +1,79 @@
+.about-container {
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 2rem;
+  background: linear-gradient(90deg #7e7b84, #677375);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #6c63ff;
+}
+
+.about-name {
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(90deg, #4a77b3, #8b4ed2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-role {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+.about-intro {
+  margin-top: 0.5rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.about-section {
+  margin-top: 2rem;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  color: #9f7aea;
+  border-bottom: 2px solid #6c63ff;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.about-section ul {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
+.skills {
+  margin-top: 2.5rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skills-grid span {
+  background: #1e1e2f;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #6c63ff;
+  font-size: 0.9rem;
+}
