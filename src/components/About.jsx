@@ -1,6 +1,5 @@
 import React from "react";
 import "../components/Styles/About.css";
-import ProjectScreen from "./ProjectScreen";
 const About = () => {
   return (
     <>
