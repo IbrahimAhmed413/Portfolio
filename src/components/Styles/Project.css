@@ -3,17 +3,23 @@
   display: flex;
   justify-content: center;
   gap: 1%;
+  animation: fadeInUp 0.8s ease-out;
 }
 .gradient-color {
-  background: linear-gradient(90deg, #4a77b3, #8b4ed2); 
+  background: linear-gradient(90deg, #4a77b3, #8b4ed2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+    animation: fadeInUp 0.6s ease-out;
+
 }
-.writing-div{
-    color: #FFFFFF;
-    text-align: center;
-    opacity: 80%;
+.writing-div {
+  color: #ffffff;
+  text-align: center;
+  opacity: 80%;
+  animation: fadeInUp 0.8s ease-out;
+
 }
+
 /* 📱 Mobile screens */
 @media (max-width: 600px) {
   .project-main-div h1 {

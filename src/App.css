@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #0b111d, #090c18);
-
+  animation: slideInLeft 0.8s ease-out 0.2s both;
 }
 .maindiv {
   /* background: linear-gradient(to bottom, #0b111d, #090c18, #000000); */
@@ -10,6 +10,7 @@ body {
 .carousalDiv {
   margin-top: 1%;
   display: flex;
+  animation: slideInLeft 0.8s ease-out 0.2s both;
   flex-direction: row;
   gap: 3%;
   justify-content: center;
