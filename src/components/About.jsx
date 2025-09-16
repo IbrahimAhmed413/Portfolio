@@ -4,10 +4,7 @@ import ProjectScreen from "./ProjectScreen";
 const About = () => {
   return (
     <>
-      
-        <ProjectScreen dh1=" About Me" />
-
-      <section className="about-container">
+        <section className="about-container">
         <div className="about-header">
           {/* <img src={profilePic} alt="Ibrahim Ahmed" className="about-image" /> */}
           <div>
