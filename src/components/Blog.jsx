@@ -87,7 +87,7 @@ const Blogs = () => {
             <div className="blog-placeholder">
               <span>
                 <img
-                  style={{ objectFit: "fill" }}
+                  style={{ objectFit: "cover" }}
                   src="https://www.searchenginejournal.com/wp-content/uploads/2022/05/javascript-seo-6286cc9ae2da3-sej.png"
                   alt=""
                 />
