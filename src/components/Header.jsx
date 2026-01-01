@@ -6,7 +6,7 @@ import ibi from "../assets/ibi.jpeg";
 const Header = () => {
   function onclick(){
     const link = document.createElement("a")
-    link.href = "/Ibrahim Ahmed_front-end-dev.pdf"
+    link.href = "/IbrahimAhmed's_resume.pdf"
     link.download = "IbrahimAhmed's_resume"
     link.click()
   }
