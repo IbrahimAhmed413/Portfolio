@@ -381,8 +381,8 @@ export default function Contact() {
     {
       icon: <Phone size={24} />,
       title: "Phone",
-      value: "+923431938944",
-      link: "tel:+923431938944",
+      value: "+447387457766",
+      link: "tel:+447387457766",
     },
   ];
 
